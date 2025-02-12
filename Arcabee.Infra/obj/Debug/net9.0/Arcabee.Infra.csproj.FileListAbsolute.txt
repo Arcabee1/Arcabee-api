@@ -1,0 +1,15 @@
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\bin\Debug\net9.0\Arcabee.Infra.deps.json
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\bin\Debug\net9.0\Arcabee.Infra.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\bin\Debug\net9.0\Arcabee.Infra.pdb
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\bin\Debug\net9.0\Arcabee.Dominio.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\bin\Debug\net9.0\Arcabee.Dominio.pdb
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.csproj.AssemblyReference.cache
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.AssemblyInfoInputs.cache
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.AssemblyInfo.cs
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee..E3F83BB7.Up2Date
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\refint\Arcabee.Infra.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.pdb
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\ref\Arcabee.Infra.dll

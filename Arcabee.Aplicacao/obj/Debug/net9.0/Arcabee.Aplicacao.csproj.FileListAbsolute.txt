@@ -1,0 +1,17 @@
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\bin\Debug\net9.0\Arcabee.Aplicacao.deps.json
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\bin\Debug\net9.0\Arcabee.Aplicacao.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\bin\Debug\net9.0\Arcabee.Aplicacao.pdb
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\bin\Debug\net9.0\Arcabee.DataTransfer.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\bin\Debug\net9.0\Arcabee.Dominio.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\bin\Debug\net9.0\Arcabee.DataTransfer.pdb
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\bin\Debug\net9.0\Arcabee.Dominio.pdb
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.csproj.AssemblyReference.cache
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.AssemblyInfoInputs.cache
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.AssemblyInfo.cs
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee..C29D5B34.Up2Date
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\refint\Arcabee.Aplicacao.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.pdb
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\ref\Arcabee.Aplicacao.dll

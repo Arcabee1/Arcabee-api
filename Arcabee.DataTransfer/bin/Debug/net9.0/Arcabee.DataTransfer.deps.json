@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Arcabee.DataTransfer/1.0.0": {
+        "dependencies": {
+          "Arcabee.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "Arcabee.DataTransfer.dll": {}
+        }
+      },
+      "Arcabee.Dominio/1.0.0": {
+        "runtime": {
+          "Arcabee.Dominio.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Arcabee.DataTransfer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Arcabee.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

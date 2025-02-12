@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arcabee.DataTransfer\Arcabee.DataTransfer.csproj" />
+    <ProjectReference Include="..\Arcabee.Dominio\Arcabee.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "vKctOXNNicP9R5wnQG3siLGdXI+8UidVXCjyQSKxPBo=",
+  "Source": "Arcabee.Api",
+  "BasePath": "_content/Arcabee.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

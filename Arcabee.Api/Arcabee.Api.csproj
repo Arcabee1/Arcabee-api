@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+      <TargetFramework>net9.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Arcabee.DataTransfer\Arcabee.DataTransfer.csproj" />
+    <ProjectReference Include="..\Arcabee.Aplicacao\Arcabee.Aplicacao.csproj" />
+    <ProjectReference Include="..\Arcabee.Infra\Arcabee.Infra.csproj" />
+    <ProjectReference Include="..\Arcabee.Ioc\Arcabee.Ioc.csproj" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"
+      Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+</Project>
