@@ -23,10 +23,24 @@ public class UsuariosController : ControllerBase
     /// <param name="request">Dados do usuário a ser inserido.</param>
     /// <returns>Dados do usuário criado.</returns>
     [HttpPost]
-    [EnableCors("CorsPolicy")]
+    // [EnableCors("CorsPolicy")]
     public ActionResult<UsuariosResponse> Inserir([FromBody] UsuariosInserirRequest request)
     {
         UsuariosResponse usuario = usuariosAppServico.Inserir(request);
+
+        return Ok(usuario);
+    }
+
+    /// <summary>
+    /// Listar usuarios
+    /// </summary>
+    /// <param name="request">Dados dos usuários a serem listados.</param>
+    /// <returns>Dados dos usuários listados.</returns>
+    [HttpGet]
+    // [EnableCors("CorsPolicy")]
+    public ActionResult<IList<UsuariosResponse>> Listar([FromQuery] UsuariosListarRequest request)
+    {
+        IList<UsuariosResponse> usuario = usuariosAppServico.Listar(request);
 
         return Ok(usuario);
     }

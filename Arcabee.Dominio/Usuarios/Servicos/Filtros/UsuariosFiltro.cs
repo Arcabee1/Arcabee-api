@@ -1,8 +1,8 @@
-namespace Arcabee.DataTransfer.Usuarios.Response;
+namespace Arcabee.Dominio.Usuarios.Servicos.Filtros;
 
-public class UsuariosResponse
+public class UsuariosFiltro
 {
-    public int Id { get; set; }
+    public int? Id { get; set; }
     public string UsuarioDescricao { get; set; }
     public string Login { get; set; }
     public string Senha { get; set; }
