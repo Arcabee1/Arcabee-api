@@ -67,3 +67,4 @@ C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Api\obj\Debug\net9.0\r
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Api\obj\Debug\net9.0\Arcabee.Api.pdb
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Api\obj\Debug\net9.0\Arcabee.Api.genruntimeconfig.cache
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Api\obj\Debug\net9.0\ref\Arcabee.Api.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Api\obj\Debug\net9.0\Arcabee.Api.sourcelink.json

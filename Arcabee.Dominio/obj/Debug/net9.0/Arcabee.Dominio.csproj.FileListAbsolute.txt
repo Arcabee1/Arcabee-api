@@ -9,3 +9,4 @@ C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Dominio\obj\Debug\net9
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Dominio\obj\Debug\net9.0\refint\Arcabee.Dominio.dll
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Dominio\obj\Debug\net9.0\Arcabee.Dominio.pdb
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Dominio\obj\Debug\net9.0\ref\Arcabee.Dominio.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Dominio\obj\Debug\net9.0\Arcabee.Dominio.sourcelink.json

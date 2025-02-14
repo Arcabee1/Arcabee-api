@@ -15,3 +15,4 @@ C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\ne
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\refint\Arcabee.Aplicacao.dll
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.pdb
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\ref\Arcabee.Aplicacao.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Aplicacao\obj\Debug\net9.0\Arcabee.Aplicacao.sourcelink.json

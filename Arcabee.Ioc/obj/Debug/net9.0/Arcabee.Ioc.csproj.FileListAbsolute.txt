@@ -19,3 +19,4 @@ C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Ioc\obj\Debug\net9.0\A
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Ioc\obj\Debug\net9.0\refint\Arcabee.Ioc.dll
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Ioc\obj\Debug\net9.0\Arcabee.Ioc.pdb
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Ioc\obj\Debug\net9.0\ref\Arcabee.Ioc.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Ioc\obj\Debug\net9.0\Arcabee.Ioc.sourcelink.json

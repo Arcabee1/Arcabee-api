@@ -13,3 +13,4 @@ C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\refint\Arcabee.Infra.dll
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.pdb
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\ref\Arcabee.Infra.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.Infra\obj\Debug\net9.0\Arcabee.Infra.sourcelink.json

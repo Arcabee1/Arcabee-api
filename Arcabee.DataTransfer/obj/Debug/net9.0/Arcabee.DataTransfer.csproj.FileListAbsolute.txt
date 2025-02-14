@@ -13,3 +13,4 @@ C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.DataTransfer\obj\Debug
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.DataTransfer\obj\Debug\net9.0\refint\Arcabee.DataTransfer.dll
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.DataTransfer\obj\Debug\net9.0\Arcabee.DataTransfer.pdb
 C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.DataTransfer\obj\Debug\net9.0\ref\Arcabee.DataTransfer.dll
+C:\Users\Gabriel\source\repos\repositorio-arcabee\Arcabee.DataTransfer\obj\Debug\net9.0\Arcabee.DataTransfer.sourcelink.json
