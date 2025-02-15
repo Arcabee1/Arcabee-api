@@ -378,3 +378,17 @@ TestReports/
 Arcabee.Api/obj/Debug/net9.0/Arcabee.Api.sourcelink.json
 Arcabee.Api/obj/Debug/net9.0/Arcabee.Api.AssemblyInfoInputs.cache
 Arcabee.Api/obj/Debug/net9.0/Arcabee.Api.AssemblyInfo.cs
+
+# Ignore arquivos e diretórios gerados pelo comando dotnet watch run
+/Arcabee.Api/obj/
+/Arcabee.Api/bin/
+/Arcabee.Aplicacao/obj/
+/Arcabee.Aplicacao/bin/
+/Arcabee.DataTransfer/obj/
+/Arcabee.DataTransfer/bin/
+/Arcabee.Dominio/obj/
+/Arcabee.Dominio/bin/
+/Arcabee.Infra/obj/
+/Arcabee.Infra/bin/
+/Arcabee.Ioc/obj/
+/Arcabee.Ioc/bin/
