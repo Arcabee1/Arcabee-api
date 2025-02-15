@@ -1,7 +1,6 @@
 using Arcabee.Aplicacao.Usuarios.Servicos.Interfaces;
 using Arcabee.DataTransfer.Usuarios.Request;
 using Arcabee.DataTransfer.Usuarios.Response;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Arcabee.Api.Controllers.Usuarios;
@@ -23,7 +22,6 @@ public class UsuariosController : ControllerBase
     /// <param name="request">Dados do usuário a ser inserido.</param>
     /// <returns>Dados do usuário criado.</returns>
     [HttpPost]
-    // [EnableCors("CorsPolicy")]
     public ActionResult<UsuariosResponse> Inserir([FromBody] UsuariosInserirRequest request)
     {
         UsuariosResponse usuario = usuariosAppServico.Inserir(request);
@@ -37,10 +35,35 @@ public class UsuariosController : ControllerBase
     /// <param name="request">Dados dos usuários a serem listados.</param>
     /// <returns>Dados dos usuários listados.</returns>
     [HttpGet]
-    // [EnableCors("CorsPolicy")]
     public ActionResult<IList<UsuariosResponse>> Listar([FromQuery] UsuariosListarRequest request)
     {
         IList<UsuariosResponse> usuario = usuariosAppServico.Listar(request);
+
+        return Ok(usuario);
+    }
+
+    /// <summary>
+    /// Editar usuario
+    /// </summary>
+    /// <param name="request">Edita propriedades do usuário</param>
+    /// <returns>Dados do usuário atualizado.</returns>
+    [HttpPut]
+    public ActionResult<UsuariosResponse> Editar([FromQuery] UsuariosEditarRequest request)
+    {
+        UsuariosResponse usuario = usuariosAppServico.Editar(request);
+
+        return Ok(usuario);
+    }
+
+    /// <summary>
+    /// Autoriza login do usuário
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns>Usuario usuário autorizado</returns>
+    [HttpGet("login")]
+    public ActionResult<UsuariosResponse> Login([FromQuery] UsuariosLoginRequest request)
+    {
+        UsuariosResponse usuario = usuariosAppServico.Login(request);
 
         return Ok(usuario);
     }

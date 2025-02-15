@@ -18,6 +18,15 @@ public class UsuariosRepositorio(ISession session) : IUsuariosRepositorio
         }
     }
 
+    public void Editar(Usuario usuario)
+    {
+        using (var transaction = _session.BeginTransaction())
+        {
+            _session.Update(usuario);
+            transaction.Commit();
+        }
+    }
+
     public IQueryable<Usuario> ListarUsuarios(UsuariosFiltro filtro)
     {
         var query = _session.Query<Usuario>();
@@ -38,5 +47,19 @@ public class UsuariosRepositorio(ISession session) : IUsuariosRepositorio
             query = query.Where(x => x.Perfil.ToUpper() == filtro.Perfil.ToUpper());
 
         return query;
+    }
+
+    public Usuario Recuperar(int id)
+    {
+        return _session.Get<Usuario>(id);
+    }
+    public Usuario Login(string login, string senha)
+    {
+        var query = _session.Query<Usuario>();
+        
+        if (!string.IsNullOrEmpty(login) && !string.IsNullOrEmpty(senha))
+            query = query.Where(x => x.Login == login && x.Senha == senha);
+        
+        return query.FirstOrDefault();
     }
 }

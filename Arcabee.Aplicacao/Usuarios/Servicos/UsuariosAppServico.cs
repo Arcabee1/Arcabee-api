@@ -21,6 +21,27 @@ public class UsuariosAppServico : IUsuariosAppServico
         this.usuariosRepositorio = usuariosRepositorio;
     }
 
+    public UsuariosResponse Editar(UsuariosEditarRequest request)
+    {
+        try
+        {
+            var usuario = usuariosServicos.Editar(request.Id, request.UsuarioDescricao, request.Login, request.Senha, request.Email, request.Perfil);
+
+            return new UsuariosResponse
+            {
+                Id = usuario.Id,
+                UsuarioDescricao = usuario.UsuarioDescricao,
+                Login = usuario.Login,
+                Email = usuario.Email,
+                Perfil = usuario.Perfil
+            };
+        }
+        catch (System.Exception)
+        {
+            throw;
+        }
+    }
+
     public UsuariosResponse Inserir(UsuariosInserirRequest request)
     {
         try
@@ -62,5 +83,26 @@ public class UsuariosAppServico : IUsuariosAppServico
             Email = usuario.Email,
             Perfil = usuario.Perfil
         }).ToList();
+    }
+
+    public UsuariosResponse Login(UsuariosLoginRequest request)
+    {
+        try
+        {
+            var usuario = usuariosServicos.Login(request.Login, request.Senha);
+
+            return new UsuariosResponse
+            {
+                Id = usuario.Id,
+                UsuarioDescricao = usuario.UsuarioDescricao,
+                Login = usuario.Login,
+                Email = usuario.Email,
+                Perfil = usuario.Perfil
+            };
+        }
+        catch (System.Exception)
+        {
+            throw;
+        }
     }
 }
