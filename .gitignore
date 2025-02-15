@@ -349,3 +349,32 @@ TestReports/
 
 # Visual Code
 .vscode/
+# Ignorar arquivos gerados automaticamente
+**/obj/
+**/bin/
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
+**/*.sourcelink.json
+**/*.AssemblyInfoInputs.cache
+**/*.AssemblyInfo.cs
+**/*.log
+**/*.tmp
+**/*.cache
+**/*.pdb
+**/*.ilk
+**/*.meta
+**/*.tmp_proj
+**/*.pidb
+**/*.svclog
+**/*.tlog
+**/*.log
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
+
+# Ignorar arquivos específicos
+Arcabee.Api/obj/Debug/net9.0/Arcabee.Api.sourcelink.json
+Arcabee.Api/obj/Debug/net9.0/Arcabee.Api.AssemblyInfoInputs.cache
+Arcabee.Api/obj/Debug/net9.0/Arcabee.Api.AssemblyInfo.cs
