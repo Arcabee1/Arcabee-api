@@ -1,29 +1,24 @@
 using Microsoft.OpenApi.Models;
 using NHibernate;
-using FluentNHibernate.Cfg;
-using FluentNHibernate.Cfg.Db;
-using Arcabee.Dominio.Usuarios.Entidades;
 using Arcabee.Ioc;
-using Microsoft.AspNetCore.Rewrite;
-using System.Reflection;
 
 public partial class Program
 {
     public static void Main(string[] args)
     {
-        
+
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-       builder.Services.AddCors(options =>
-                                {
-                                    options.AddPolicy("CorsPolicy",
-                                        policy =>
-                                        {
-                                            policy.WithOrigins("http://localhost:5249")
-                                                .AllowAnyMethod()
-                                                .AllowAnyHeader()
-                                                .AllowCredentials();
-                                        });
-                                });
+        builder.Services.AddCors(options =>
+                                 {
+                                     options.AddPolicy("CorsPolicy",
+                                         policy =>
+                                         {
+                                             policy.WithOrigins("http://localhost:4200")
+                                                 .AllowAnyMethod()
+                                                 .AllowAnyHeader()
+                                                 .AllowCredentials();
+                                         });
+                                 });
         // Configuração do Swagger
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
@@ -35,7 +30,7 @@ public partial class Program
         builder.Services.AddScoped(provider =>
            provider.GetRequiredService<ISessionFactory>().OpenSession());
 
-        
+
         NativeInjectorBootStrapper.RegisterServices(builder.Services, builder.Configuration, builder.Environment);
 
 
@@ -50,12 +45,12 @@ public partial class Program
                 c.RoutePrefix = string.Empty;
             });
         }
-        
+
         app.UseRouting();
-        app.UseCors("CorsPolicy");   
+        app.UseCors("CorsPolicy");
+        app.UseCors("AllowAngular");
         app.UseAuthorization();
         app.MapControllers();
         app.Run();
-
     }
 }

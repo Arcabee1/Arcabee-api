@@ -16,10 +16,11 @@ public class Usuario
         SetEmail(email);
         SetPerfil(perfil);
     }
-    public Usuario(){ }
+    public Usuario() { }
 
     public virtual void SetPerfil(string perfil)
     {
+        perfil ??= "user";
         Perfil = perfil;
     }
 
