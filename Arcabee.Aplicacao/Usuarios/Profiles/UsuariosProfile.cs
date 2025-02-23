@@ -12,7 +12,7 @@ public class UsuariosProfile : Profile
     public UsuariosProfile()
     {
         CreateMap<UsuariosInserirRequest, UsuariosInserirComando>();
-        CreateMap<UsuariosInserirRequest, UsuariosFiltro>();
+        CreateMap<UsuariosListarRequest, UsuariosFiltro>();
         CreateMap<UsuariosEditarRequest, UsuariosEditarComando>();
         CreateMap<Usuario, UsuariosResponse>();
     }
