@@ -1,11 +1,8 @@
 using Microsoft.OpenApi.Models;
 using NHibernate;
-using FluentNHibernate.Cfg;
-using FluentNHibernate.Cfg.Db;
-using Arcabee.Dominio.Usuarios.Entidades;
 using Arcabee.Ioc;
-using Microsoft.AspNetCore.Rewrite;
-using System.Reflection;
+using Arcabee.Aplicacao.Usuarios.Profiles;
+using AutoMapper;
 
 public partial class Program
 {
@@ -13,6 +10,7 @@ public partial class Program
     {
         
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+        
        builder.Services.AddCors(options =>
                                 {
                                     options.AddPolicy("CorsPolicy",
@@ -34,11 +32,18 @@ public partial class Program
 
         builder.Services.AddScoped(provider =>
            provider.GetRequiredService<ISessionFactory>().OpenSession());
-
         
         NativeInjectorBootStrapper.RegisterServices(builder.Services, builder.Configuration, builder.Environment);
-
-
+        
+        var mapperConfig = new MapperConfiguration(cfg =>
+        {
+            cfg.AddProfile(new UsuariosProfile());
+        });
+        
+        IMapper mapper = mapperConfig.CreateMapper();
+        
+        builder.Services.AddSingleton(mapper);
+        
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
