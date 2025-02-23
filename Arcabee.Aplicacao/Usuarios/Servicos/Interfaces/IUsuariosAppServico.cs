@@ -8,6 +8,6 @@ public interface IUsuariosAppServico
 {
     UsuariosResponse Inserir(UsuariosInserirRequest request);
     UsuariosResponse Login(UsuariosLoginRequest request);
-    IList<UsuariosResponse> Listar(UsuariosListarRequest request);
+    List<UsuariosResponse> Listar(UsuariosListarRequest request);
     UsuariosResponse Editar(UsuariosEditarRequest request);
 }
