@@ -11,8 +11,7 @@
     <ProjectReference Include="..\Arcabee.Aplicacao\Arcabee.Aplicacao.csproj" />
     <ProjectReference Include="..\Arcabee.Infra\Arcabee.Infra.csproj" />
     <ProjectReference Include="..\Arcabee.Ioc\Arcabee.Ioc.csproj" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"
-      Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.1" />
   </ItemGroup>
 
   <ItemGroup>

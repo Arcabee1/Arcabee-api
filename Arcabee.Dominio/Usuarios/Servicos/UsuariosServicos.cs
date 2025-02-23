@@ -1,5 +1,6 @@
 using Arcabee.Dominio.Usuarios.Entidades;
 using Arcabee.Dominio.Usuarios.Repositorios;
+using Arcabee.Dominio.Usuarios.Servicos.Comandos;
 using Arcabee.Dominio.Usuarios.Servicos.Interfaces;
 
 namespace Arcabee.Dominio.Usuarios.Servicos;
@@ -13,28 +14,30 @@ public class UsuariosServicos : IUsuariosServicos
         this.usuarioRepositorio = usuarioRepositorio;
     }
 
-    public Usuario Editar(int id, string usuarioDescricao, string login, string senha, string email, string perfil)
+    public Usuario Editar(UsuariosEditarComando comando)
     {
-        Usuario usuario = Validar(id);
+
+        Usuario usuario = Validar(comando.Id);
         
-        if(usuarioDescricao != null)
-            usuario.SetUsuarioDescricao(usuarioDescricao);
-        if(login != null)
-            usuario.SetLogin(login);
-        if(senha != null)
-            usuario.SetSenha(senha);
-        if(email != null)
-            usuario.SetEmail(email);
-        if(perfil != null)
-            usuario.SetPerfil(perfil);
+        if(comando.UsuarioDescricao != null)
+            usuario.SetUsuarioDescricao(comando.UsuarioDescricao);
+        if(comando.Login != null)
+            usuario.SetLogin(comando.Login);
+        if(comando.Senha != null)
+            usuario.SetSenha(comando.Senha);
+        if(comando.Email != null)
+            usuario.SetEmail(comando.Email);
+        if(comando.Perfil != null)
+            usuario.SetPerfil(comando.Perfil);
 
         usuarioRepositorio.Editar(usuario);
         return usuario;
     }
 
-    public Usuario Inserir(string usuarioDescricao, string login, string senha, string email, string perfil)
+    public Usuario Inserir(UsuariosInserirComando comando)
     {
-        var usuario = new Usuario(usuarioDescricao, login, senha, email, perfil);
+        var usuario = new Usuario(comando.UsuarioDescricao, comando.Login, comando.Senha, comando.Email, comando.Perfil);
+        
         usuarioRepositorio.Adicionar(usuario);
         return usuario;
     }

@@ -1,6 +1,8 @@
 using Microsoft.OpenApi.Models;
 using NHibernate;
 using Arcabee.Ioc;
+using Arcabee.Aplicacao.Usuarios.Profiles;
+using AutoMapper;
 
 public partial class Program
 {
@@ -32,8 +34,16 @@ public partial class Program
 
 
         NativeInjectorBootStrapper.RegisterServices(builder.Services, builder.Configuration, builder.Environment);
-
-
+        
+        var mapperConfig = new MapperConfiguration(cfg =>
+        {
+            cfg.AddProfile(new UsuariosProfile());
+        });
+        
+        IMapper mapper = mapperConfig.CreateMapper();
+        
+        builder.Services.AddSingleton(mapper);
+        
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
