@@ -3,6 +3,7 @@ using NHibernate;
 using Arcabee.Ioc;
 using Arcabee.Aplicacao.Usuarios.Profiles;
 using AutoMapper;
+using Arcabee.Aplicacao.Produtos.Profiles;
 
 public partial class Program
 {
@@ -21,7 +22,7 @@ public partial class Program
                                                  .AllowCredentials();
                                          });
                                  });
-        // Configuração do Swagger
+        
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
@@ -38,6 +39,7 @@ public partial class Program
         var mapperConfig = new MapperConfiguration(cfg =>
         {
             cfg.AddProfile(new UsuariosProfile());
+            cfg.AddProfile(new ProdutosProfile());
         });
         
         IMapper mapper = mapperConfig.CreateMapper();
