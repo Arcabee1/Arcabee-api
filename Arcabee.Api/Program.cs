@@ -3,26 +3,25 @@ using NHibernate;
 using Arcabee.Ioc;
 using Arcabee.Aplicacao.Usuarios.Profiles;
 using AutoMapper;
+using Arcabee.Aplicacao.Produtos.Profiles;
 
 public partial class Program
 {
     public static void Main(string[] args)
     {
-        
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+        builder.Services.AddCors(options =>
+                                 {
+                                     options.AddPolicy("CorsPolicy",
+                                         policy =>
+                                         {
+                                             policy.WithOrigins("http://localhost:4200")
+                                                 .AllowAnyMethod()
+                                                 .AllowAnyHeader()
+                                                 .AllowCredentials();
+                                         });
+                                 });
         
-       builder.Services.AddCors(options =>
-                                {
-                                    options.AddPolicy("CorsPolicy",
-                                        policy =>
-                                        {
-                                            policy.WithOrigins("http://localhost:5249")
-                                                .AllowAnyMethod()
-                                                .AllowAnyHeader()
-                                                .AllowCredentials();
-                                        });
-                                });
-        // Configuração do Swagger
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
@@ -32,12 +31,13 @@ public partial class Program
 
         builder.Services.AddScoped(provider =>
            provider.GetRequiredService<ISessionFactory>().OpenSession());
-        
+
         NativeInjectorBootStrapper.RegisterServices(builder.Services, builder.Configuration, builder.Environment);
         
         var mapperConfig = new MapperConfiguration(cfg =>
         {
             cfg.AddProfile(new UsuariosProfile());
+            cfg.AddProfile(new ProdutosProfile());
         });
         
         IMapper mapper = mapperConfig.CreateMapper();
@@ -55,12 +55,12 @@ public partial class Program
                 c.RoutePrefix = string.Empty;
             });
         }
-        
+
         app.UseRouting();
-        app.UseCors("CorsPolicy");   
+        app.UseCors("CorsPolicy");
+        app.UseCors("AllowAngular");
         app.UseAuthorization();
         app.MapControllers();
         app.Run();
-
     }
 }
