@@ -1,8 +1,7 @@
-using System.Collections.Generic;
-using Arcabee.DataTransfer.Produtos.Request;
-using Arcabee.DataTransfer.Produtos.Response;
-using Arcabee.Dominio.Produtos.Entidades;
 using Arcabee.Dominio.Produtos.Servicos.Filtros;
+using Arcabee.DataTransfer.Produtos.Response;
+using Arcabee.DataTransfer.Produtos.Request;
+using Arcabee.Dominio.Produtos.Entidades;
 using AutoMapper;
 
 namespace Arcabee.Aplicacao.Produtos.Profiles;

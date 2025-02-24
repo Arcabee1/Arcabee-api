@@ -1,6 +1,6 @@
-using Arcabee.Dominio.Produtos.Entidades;
-using Arcabee.Dominio.Produtos.Repositorios;
 using Arcabee.Dominio.Produtos.Servicos.Filtros;
+using Arcabee.Dominio.Produtos.Repositorios;
+using Arcabee.Dominio.Produtos.Entidades;
 using NHibernate;
 
 namespace Arcabee.Infra.Produtos.Repositorios;

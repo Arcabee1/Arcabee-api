@@ -1,11 +1,11 @@
+using Arcabee.Aplicacao.Produtos.Servicos.Interfaces;
+using Arcabee.Dominio.Produtos.Servicos.Filtros;
+using Arcabee.DataTransfer.Produtos.Response;
+using Arcabee.Dominio.Produtos.Repositorios;
+using Arcabee.DataTransfer.Produtos.Request;
+using Arcabee.Dominio.Produtos.Entidades;
 using System.Collections.Generic;
 using System.Linq;
-using Arcabee.Aplicacao.Produtos.Servicos.Interfaces;
-using Arcabee.DataTransfer.Produtos.Request;
-using Arcabee.DataTransfer.Produtos.Response;
-using Arcabee.Dominio.Produtos.Entidades;
-using Arcabee.Dominio.Produtos.Repositorios;
-using Arcabee.Dominio.Produtos.Servicos.Filtros;
 using AutoMapper;
 
 namespace Arcabee.Aplicacao.Produtos.Servicos;
@@ -36,5 +36,4 @@ public class ProdutosAppServico : IProdutosAppServicos
             throw;
         }
     }
-
 }

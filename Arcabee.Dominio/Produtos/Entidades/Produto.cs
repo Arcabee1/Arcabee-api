@@ -37,72 +37,59 @@ public class Produto
     }
 
     public Produto() { }
-
+    
     public virtual void SetCodigoProduto(string codigoProduto)
     {
         CodigoProduto = codigoProduto;
     }
-
     public virtual void SetNome(string nome)
     {
         Nome = nome;
     }
-
     public virtual void SetTipo(string tipo)
     {
         Tipo = tipo;
     }
-
     public virtual void SetMarca(string marca)
     {
         Marca = marca;
     }
-
     public virtual void SetLinha(string linha)
     {
         Linha = linha;
     }
-
     public virtual void SetMiniatura(string miniatura)
     {
         Miniatura = miniatura;
     }
-
     public virtual void SetCor(string cor)
     {
         Cor = cor;
     }
-
     public virtual void SetTextura(string textura)
     {
         Textura = textura;
     }
-
     public virtual void SetBumb(string bumb)
     {
         Bumb = bumb;
     }
-
     public virtual void SetRugosidade(string rugosidade)
     {
         Rugosidade = rugosidade;
     }
-
     public virtual void SetRecortes(string recortes)
     {
         Recortes = recortes;
     }
-
     public virtual void SetOpacidade(string opacidade)
     {
         Opacidade = opacidade;
     }
-
     public virtual void SetReflexao(string reflexao)
     {
         Reflexao = reflexao;
     }
-
     public virtual void SetDescricao(string descricao)
     {
         Descricao = descricao;

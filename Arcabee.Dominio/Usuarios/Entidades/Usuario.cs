@@ -23,22 +23,18 @@ public class Usuario
         perfil ??= "user";
         Perfil = perfil;
     }
-
     public virtual void SetEmail(string email)
     {
         Email = email;
     }
-
     public virtual void SetSenha(string senha)
     {
         Senha = senha;
     }
-
     public virtual void SetLogin(string login)
     {
         Login = login;
     }
-
     public virtual void SetUsuarioDescricao(string usuarioDescricao)
     {
         UsuarioDescricao = usuarioDescricao;

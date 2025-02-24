@@ -9,7 +9,6 @@ public partial class Program
 {
     public static void Main(string[] args)
     {
-
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
         builder.Services.AddCors(options =>
                                  {
@@ -32,7 +31,6 @@ public partial class Program
 
         builder.Services.AddScoped(provider =>
            provider.GetRequiredService<ISessionFactory>().OpenSession());
-
 
         NativeInjectorBootStrapper.RegisterServices(builder.Services, builder.Configuration, builder.Environment);
         

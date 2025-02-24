@@ -1,8 +1,6 @@
-using System.Configuration;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Arcabee.Dominio.Usuarios.Repositorios;
-
 using Arcabee.Infra.Usuarios.Repositorios;
 using Arcabee.Dominio.Usuarios.Servicos.Interfaces;
 using Arcabee.Aplicacao.Usuarios.Servicos.Interfaces;
