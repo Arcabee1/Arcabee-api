@@ -4,9 +4,9 @@ using Arcabee.DataTransfer.Produtos.Response;
 using Arcabee.Dominio.Produtos.Repositorios;
 using Arcabee.DataTransfer.Produtos.Request;
 using Arcabee.Dominio.Produtos.Entidades;
-using System.Collections.Generic;
-using System.Linq;
 using AutoMapper;
+using Arcabee.Dominio.Paginacao;
+using System.Threading.Tasks;
 
 namespace Arcabee.Aplicacao.Produtos.Servicos;
 
@@ -21,15 +21,15 @@ public class ProdutosAppServico : IProdutosAppServicos
         this.mapper = mapper;
     }
 
-    public List<ProdutosResponse> ListarProdutos(ProdutosListarRequest request)
+    public async Task<PaginacaoConsulta<ProdutosResponse>> ListarProdutos(ProdutosListarRequest request, int pagina, int qtdItens)
     {
         try
         {
             var filtro = mapper.Map<ProdutosFiltro>(request);
 
-            List<Produto> produtos = produtosRepositorio.ListarProdutos(filtro).ToList();
+            PaginacaoConsulta<Produto> produtos = await produtosRepositorio.ListarProdutos(filtro,pagina,qtdItens);
 
-            return mapper.Map<List<ProdutosResponse>>(produtos);
+            return mapper.Map<PaginacaoConsulta<ProdutosResponse>>(produtos);
         }
         catch (System.Exception)
         {

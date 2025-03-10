@@ -17,4 +17,7 @@ public class ProdutosListarRequest
     public string Opacidade { get; set; }
     public string Reflexao { get; set; }
     public string Descricao { get; set; }
+    public int Pagina { get; set; }
+    public int QtdItens { get; set; }
+
 }
