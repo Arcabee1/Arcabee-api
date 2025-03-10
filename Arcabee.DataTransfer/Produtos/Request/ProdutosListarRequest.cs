@@ -1,8 +1,11 @@
+using Arcabee.Dominio.libs.Filtros;
+using Arcabee.Dominio.libs.Filtros.Enumeradores;
+
 namespace Arcabee.DataTransfer.Produtos.Request;
 
-public class ProdutosListarRequest
+public class ProdutosListarRequest :  PaginacaoFiltro
 {
-   public int? Id { get; set; }
+    public int? Id { get; set; }
     public string CodigoProduto { get; set; }
     public string Nome { get; set; }
     public string Tipo { get; set; }
@@ -20,4 +23,8 @@ public class ProdutosListarRequest
     public int Pagina { get; set; }
     public int QtdItens { get; set; }
 
+    public ProdutosListarRequest() : base("Id", TipoOrdenacaoEnum.Asc)
+    {
+
+    }
 }

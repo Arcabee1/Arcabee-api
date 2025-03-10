@@ -1,7 +1,7 @@
 using Arcabee.Aplicacao.Produtos.Servicos.Interfaces;
 using Arcabee.DataTransfer.Produtos.Request;
 using Arcabee.DataTransfer.Produtos.Response;
-using Arcabee.Dominio.Paginacao;
+using Arcabee.Dominio.libs.Consultas;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Arcabee.Api.Controllers.Produtos;
@@ -24,7 +24,7 @@ public class ProdutosController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<PaginacaoConsulta<ProdutosResponse>>> Listar([FromQuery] ProdutosListarRequest request)
     {
-        PaginacaoConsulta<ProdutosResponse> produtos = await produtosAppServicos.ListarProdutos(request, request.Pagina , request.QtdItens);
+        PaginacaoConsulta<ProdutosResponse> produtos = await produtosAppServicos.ListarProdutos(request);
 
         return Ok(produtos);
     }
