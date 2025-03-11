@@ -6,7 +6,6 @@ using Arcabee.DataTransfer.Produtos.Request;
 using Arcabee.Dominio.Produtos.Entidades;
 using Arcabee.Dominio.libs.Extensions;
 using Arcabee.Dominio.libs.Consultas;
-using System.Threading.Tasks;
 using AutoMapper;
 
 namespace Arcabee.Aplicacao.Produtos.Servicos;
@@ -22,7 +21,7 @@ public class ProdutosAppServico : IProdutosAppServicos
         this.mapper = mapper;
     }
 
-    public async Task<PaginacaoConsulta<ProdutosResponse>> ListarProdutos(ProdutosListarRequest request)
+    public PaginacaoConsulta<ProdutosResponse> ListarProdutos(ProdutosListarRequest request)
     {
         try
         {

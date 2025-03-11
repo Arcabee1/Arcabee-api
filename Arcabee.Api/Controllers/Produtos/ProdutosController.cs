@@ -22,9 +22,9 @@ public class ProdutosController : ControllerBase
     /// <param name="request">Dados dos produtos a serem listados.</param>
     /// <returns>Dados dos produtos listados.</returns>
     [HttpGet]
-    public async Task<ActionResult<PaginacaoConsulta<ProdutosResponse>>> Listar([FromQuery] ProdutosListarRequest request)
+    public ActionResult<PaginacaoConsulta<ProdutosResponse>> Listar([FromQuery] ProdutosListarRequest request)
     {
-        PaginacaoConsulta<ProdutosResponse> produtos = await produtosAppServicos.ListarProdutos(request);
+        PaginacaoConsulta<ProdutosResponse> produtos = produtosAppServicos.ListarProdutos(request);
 
         return Ok(produtos);
     }
