@@ -2,14 +2,17 @@ using Arcabee.Dominio.Produtos.Servicos.Filtros;
 using Arcabee.Dominio.Produtos.Repositorios;
 using Arcabee.Dominio.Produtos.Entidades;
 using NHibernate;
-using Arcabee.Dominio.Paginacao;
-using Arcabee.Infra.Paginacao;
+using Arcabee.Infra.libs.Repositorio;
 
 namespace Arcabee.Infra.Produtos.Repositorios;
 
-public class ProdutosRepositorio(ISession session) : IProdutosRepositorio
+public class ProdutosRepositorio : RepositorioNHibernate<Produto>, IProdutosRepositorio
 {
-    public async Task<PaginacaoConsulta<Produto>> ListarProdutos(ProdutosFiltro filtro, int pagina, int qtdItens)
+    public ProdutosRepositorio(ISession session) : base(session)
+    {
+    }
+
+    public IQueryable<Produto> ListarProdutos(ProdutosFiltro filtro)
     {
         var query = session.Query<Produto>();
 
@@ -58,6 +61,6 @@ public class ProdutosRepositorio(ISession session) : IProdutosRepositorio
         if (!string.IsNullOrEmpty(filtro.Descricao))
             query = query.Where(x => x.Descricao.ToUpper().Contains(filtro.Descricao.ToUpper()));
         
-        return await PaginacaoConsulta.PaginarAsync(query, qtdItens, pagina);
+        return query;
     }
 }
