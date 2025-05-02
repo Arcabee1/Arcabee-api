@@ -10,4 +10,5 @@ public interface IUsuariosRepositorio
     Usuario Recuperar(int id);
     Usuario Login(string login, string senha);
     IQueryable<Usuario> ListarUsuarios(UsuariosFiltro filtro);
+    bool LoginJaCadastrado(string login);
 }

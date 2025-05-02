@@ -16,7 +16,6 @@ public class UsuariosServicos : IUsuariosServicos
 
     public Usuario Editar(UsuariosEditarComando comando)
     {
-
         Usuario usuario = Validar(comando.Id);
         
         if(comando.UsuarioDescricao != null)
@@ -36,8 +35,11 @@ public class UsuariosServicos : IUsuariosServicos
 
     public Usuario Inserir(UsuariosInserirComando comando)
     {
+        if(usuarioRepositorio.LoginJaCadastrado(comando.Login))
+            throw new Exception("Login já cadastrado");
+
         var usuario = new Usuario(comando.UsuarioDescricao, comando.Login, comando.Senha, comando.Email, comando.Perfil);
-        
+
         usuarioRepositorio.Adicionar(usuario);
         return usuario;
     }

@@ -62,4 +62,13 @@ public class UsuariosRepositorio(ISession session) : IUsuariosRepositorio
         
         return query.FirstOrDefault();
     }
+    public bool LoginJaCadastrado(string login)
+    {
+        var query = _session.Query<Usuario>();
+        
+        if (!string.IsNullOrEmpty(login))
+            query = query.Where(x => x.Login == login);
+        
+        return query.Any();
+    }
 }
