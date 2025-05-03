@@ -24,7 +24,5 @@ public class ProdutosListarRequest :  PaginacaoFiltro
     public int QtdItens { get; set; }
 
     public ProdutosListarRequest() : base("Id", TipoOrdenacaoEnum.Asc)
-    {
-
-    }
+    { }
 }

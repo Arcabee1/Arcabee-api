@@ -16,7 +16,7 @@ public class ProdutosRepositorio : RepositorioNHibernate<Produto>, IProdutosRepo
     {
         var query = session.Query<Produto>();
 
-        if (filtro.Id.HasValue)
+        if (filtro.Id.HasValue && filtro.Id > 0)    
             query = query.Where(x => x.Id == filtro.Id);
 
         if (!string.IsNullOrEmpty(filtro.CodigoProduto))
