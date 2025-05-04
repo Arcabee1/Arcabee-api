@@ -21,6 +21,14 @@ public partial class Program
                                                  .AllowCredentials();
                                          });
                                  });
+        var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+
+        builder.WebHost.ConfigureKestrel(options =>
+        {
+            options.ListenAnyIP(Int32.Parse(port));
+        });                                 
+        
+
         
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
@@ -58,7 +66,6 @@ public partial class Program
 
         app.UseRouting();
         app.UseCors("CorsPolicy");
-        app.UseCors("AllowAngular");
         app.UseAuthorization();
         app.MapControllers();
         app.Run();
