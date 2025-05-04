@@ -1,12 +1,14 @@
 using Microsoft.OpenApi.Models;
 using NHibernate;
 using Arcabee.Ioc;
+using Arcabee.Aplicacao.Usuarios.Profiles;
+using AutoMapper;
+using Arcabee.Aplicacao.Produtos.Profiles;
 
 public partial class Program
 {
     public static void Main(string[] args)
     {
-
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
         builder.Services.AddCors(options =>
                                  {
@@ -19,7 +21,7 @@ public partial class Program
                                                  .AllowCredentials();
                                          });
                                  });
-        // Configuração do Swagger
+        
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
@@ -30,10 +32,18 @@ public partial class Program
         builder.Services.AddScoped(provider =>
            provider.GetRequiredService<ISessionFactory>().OpenSession());
 
-
         NativeInjectorBootStrapper.RegisterServices(builder.Services, builder.Configuration, builder.Environment);
-
-
+        
+        var mapperConfig = new MapperConfiguration(cfg =>
+        {
+            cfg.AddProfile(new UsuariosProfile());
+            cfg.AddProfile(new ProdutosProfile());
+        });
+        
+        IMapper mapper = mapperConfig.CreateMapper();
+        
+        builder.Services.AddSingleton(mapper);
+        
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
