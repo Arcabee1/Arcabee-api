@@ -15,7 +15,7 @@ public partial class Program
                                      options.AddPolicy("CorsPolicy",
                                          policy =>
                                          {
-                                             policy.WithOrigins("http://localhost:4200")
+                                             policy.WithOrigins("http://0.0.0.0:8080")
                                                  .AllowAnyMethod()
                                                  .AllowAnyHeader()
                                                  .AllowCredentials();
@@ -26,10 +26,8 @@ public partial class Program
         builder.WebHost.ConfigureKestrel(options =>
         {
             options.ListenAnyIP(Int32.Parse(port));
-        });                                 
-        
+        });
 
-        
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
@@ -41,17 +39,17 @@ public partial class Program
            provider.GetRequiredService<ISessionFactory>().OpenSession());
 
         NativeInjectorBootStrapper.RegisterServices(builder.Services, builder.Configuration, builder.Environment);
-        
+
         var mapperConfig = new MapperConfiguration(cfg =>
         {
             cfg.AddProfile(new UsuariosProfile());
             cfg.AddProfile(new ProdutosProfile());
         });
-        
+
         IMapper mapper = mapperConfig.CreateMapper();
-        
+
         builder.Services.AddSingleton(mapper);
-        
+
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
