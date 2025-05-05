@@ -1,9 +1,9 @@
 # Etapa base: Define a imagem de runtime para a aplicação final
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 WORKDIR /app
-EXPOSE 5249
+EXPOSE 8080
 
-ENV ASPNETCORE_URLS=http://+:5249
+ENV ASPNETCORE_URLS=http://+:8080
 
 # Etapa de build: Usa o SDK do .NET para compilar a aplicação
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build

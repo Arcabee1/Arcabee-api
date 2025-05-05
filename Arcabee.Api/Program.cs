@@ -21,7 +21,7 @@ public partial class Program
                                                  .AllowCredentials();
                                          });
                                  });
-        var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+        var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 
         builder.WebHost.ConfigureKestrel(options =>
         {

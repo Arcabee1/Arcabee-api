@@ -9,4 +9,4 @@ services:
       context: .
       dockerfile: Arcabee.Api/Dockerfile
     ports:
-      - 5249:5249
+      - 8080:8080
